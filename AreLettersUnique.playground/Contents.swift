@@ -1,14 +1,21 @@
 import UIKit
 
 
-func areLettersUnique(input: String) -> Bool {
+//: # areLettersUnique
+
+//: Sets don't contain duplicates
+//:
+//: We can compare the count of the set by the count of the orginal string
+//: if the count is the same we know we have a unique string
+
+func areLettersUnique(input: String) {
     let characters = input.map { $0 }
     let set = Set(characters)
-    return set.count == input.count
+    let 🤚 = set.count == input.count ? "👍" : "👎"
+    print("Unique: \(input) \(🤚)")
 }
 
-
-assert(areLettersUnique(input: "No duplicates") == true, "Challenge 1 failed")
-assert(areLettersUnique(input: "abcdefghijklmnopqrstuvwxyz") == true, "Challenge 1 failed")
-assert(areLettersUnique(input: "AaBbCc") == true, "Challenge 1 failed")
-assert(areLettersUnique(input: "Hello, world") == false, "Challenge 1 failed")
+areLettersUnique(input: "No duplicates")
+areLettersUnique(input: "abcdefghijklmnopqrstuvwxyz")
+areLettersUnique(input: "AaBbCc")
+areLettersUnique(input: "Hello, world")
