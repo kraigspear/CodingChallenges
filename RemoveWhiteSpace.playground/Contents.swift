@@ -1,5 +1,9 @@
 import UIKit
 
+//: Write a function that returns a string with any consecutive spaces replaced with a single space.
+//: Using replacingOccurrences, we can replace all continuous spaces until we no longer find any continuous spaces
+
+"a   b   c".removeWhiteSpace() == "a b c"
 
 extension String {
     
